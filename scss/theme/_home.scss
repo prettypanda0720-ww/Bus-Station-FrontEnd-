@@ -7,11 +7,24 @@
     background: -o-linear-gradient( 0deg, rgba(128, 80, 250, 0.8), rgba(128, 80, 250, 0.8)), url(../img/banner-bg.jpg) no-repeat center;
     background-size: cover;
     .primary-btn {
-        padding-left: 30px;
-        padding-right: 30px;
+        color:$primary-color !important;
+        background-color: $white;
+        font-size: 30px;
+        padding: 15px 30px;
+        font-weight: 700;
+        font-family: open-sans sans-serif;
+        &:hover{
+            color: $white !important;
+            background-color: $primary-color;
+        }
     }
     .fullscreen {
-        @media (max-width: 991px) {
+        @media (max-width: 420px) {
+            height: 200px !important;
+            padding-bottom: 40px;
+            align-items: flex-end !important;
+        }
+        @media (min-width: 420px) and (max-width: 991px) {
             height: 500px !important;
         }
     }
@@ -43,21 +56,21 @@
 //--------- End Banner Area -------------//
 //--------- Start Post Slider Area -------------//
 .post-slider-area {
-    margin-top: -100px;
+    margin-top: -40px;
     @media (max-width: 991px) {
         margin-top: 0;
-        padding-top: 60px;
+        padding-top: 20px;
     }
 }
 
 .post-box {
-    padding: 40px 80px 20px 80px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+    padding: 20px 40px 10px 40px;
+    // box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
     position: relative;
     background: $white;
     border-radius: 5px;
-    @media (max-width: 420px) {
-        padding: 40px 10px;
+    @media (max-width: 568px) {
+        padding: 15px 10px;
     }
     p {
         margin-top: 5px;
@@ -65,7 +78,12 @@
         margin-right: 0;
         margin-bottom: 0;
         max-width: 635px;
+        @media (max-width: 568px) {
+            // text-align: center;
+            display: none;
+        }
     }
+
     .post-meta {
         margin: 0px 0px 20px 20px;
     }
@@ -119,10 +137,38 @@
 //--------- Start Post Area -------------//
 .single-post-item {
     position: relative;
-    margin-left: 70px;
-    margin-bottom: 60px;
+    
+    .post-header{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 40px;
+        background: rgba(150, 0, 179, 0.5);
+        border-radius: 10px 10px 0 0;
+        padding: 10px 20px;
+
+        .nick-name{
+            border-radius: 50%;
+            background-color: #9700b2;
+            padding: 1px 5px;
+            margin-top: -1px;
+        }
+
+        label{
+            color: $white;
+        }
+    }
+
+    .post-footer{
+        margin-top: 10px;
+        padding:0px 20px;
+
+        label{
+            color:$black;
+        }
+    }
+
     &.short {
-        margin-left: 25px;
         @media (max-width: 991px) {
             margin-left: 0px;
         }
@@ -143,7 +189,8 @@
         overflow: hidden;
     }
     .post-img {
-        @include transition();
+        border-radius: 10px 10px 0 0;
+        // @include transition();
     }
     h3 {
         margin: 25px 0px 15px;
@@ -174,7 +221,7 @@
     }
     &:hover {
         .post-img {
-            @include transform(scale(1.3));
+            // @include transform(scale(1.3));
         }
         h3 {
             a {

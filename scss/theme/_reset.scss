@@ -10,7 +10,7 @@
 }
 
 ::selection {
-    background-color: $white;
+    background-color: $background-color;
     color: $white;
 }
 
@@ -53,6 +53,7 @@ body {
     font-weight: 400;
     line-height: 24px;
     position: relative;
+    background-color: $background-color;
 }
 
 ol,

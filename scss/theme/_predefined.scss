@@ -1,7 +1,10 @@
 .section-gap {
-    padding: 120px 0;
-    @media (max-width: 767px) {
-        padding: 60px 0;
+    padding: 30px;
+    @media (max-width: 419px) {
+        padding: 20px 0px;
+    }
+    @media (min-width: 420px) and (max-width: 767px) {
+        padding: 20px 0;
     }
 }
 
