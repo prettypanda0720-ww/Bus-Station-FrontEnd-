@@ -827,3 +827,77 @@
                End Blog Details  Page style
 ################
 */
+
+/*
+################
+               Review page style
+################
+*/
+.user-area{
+  position: relative;
+  margin-top: 40px;
+  a{
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    font-size: 18px;
+    color: $primary-color;
+    &:hover{
+      color: $normal-text-color;
+    }
+
+    @media(max-width: 420px){
+      position: relative;
+      display: block;
+      text-align: right;
+      margin-top: 10px;
+      right: 0;
+    }
+  }
+
+  img{
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  .user-info{
+    h3{
+      font-family: open-sans sans-serif;
+      color: $normal-text-color;
+    }
+    h5{
+      font-family: open-sans sans-serif;
+      color: $subtitle-text-color; 
+    }
+
+    @media(max-width: 420px){
+      margin-left: 20px; 
+    }
+  }
+
+  .user-link{
+    margin-top: 10px;
+    h4{
+      font-family: open-sans sans-serif;
+      color: $normal-text-color;
+    }
+    h5{
+      font-family: open-sans sans-serif;
+      color: $subtitle-text-color; 
+    }
+
+    @media(max-width: 420px){
+      margin-left: 20px; 
+    }
+  }
+
+  @media(max-width: 420px){
+
+  }
+}
+
+.review-area{
+  margin-top: 40px;
+  
+}
+
