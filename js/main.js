@@ -7,7 +7,12 @@ $(document).ready(function() {
   header_height_static = $(".site-header.static").outerHeight(),
   fitscreen = window_height - header_height;
 
-  $(".fullscreen").css("height", window_height / 2 + header_height);
+  // console.log('window_height',window_height);
+  // console.log('header_height',header_height);
+  // console.log('header_height_static',header_height_static);
+  // console.log('fitscreen',fitscreen);
+
+  $(".fullscreen").css("height", window_height / 2 + header_height_static);
   $(".fitscreen").css("height", fitscreen);
 
   if (document.getElementById("default-select")) {
@@ -269,6 +274,17 @@ $(document).ready(function() {
   $(document).ready(function() {
     $("#mc_embed_signup")
       .find("form")
-      .ajaxChimp();
+      .ajaxChimp();    
   });
+
+  $(document).on("click", "#create_account", function(e) {
+    $('#signinModalForm').modal('hide');
+    $('#signupModalForm').modal('show');
+  });
+
+  $(document).on("click", "#signin_account", function(e) {
+    $('#signupModalForm').modal('hide');
+    $('#signinModalForm').modal('show');
+  });
+  
 });

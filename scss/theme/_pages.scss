@@ -846,7 +846,7 @@
       color: $normal-text-color;
     }
 
-    @media(max-width: 420px){
+    @media(max-width: 576px){
       position: relative;
       display: block;
       text-align: right;
@@ -898,6 +898,15 @@
 
 .review-area{
   margin-top: 40px;
-  
+  .create-review-icon{
+    img{
+      max-height: 30px;   
+    }
+    span{
+      color: $normal-text-color;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
 }
 

@@ -223,7 +223,7 @@
 }
 
 .nav-menu ul {
-    margin-left: -50%;
+    // margin-left: -50%;
     padding: 10px;
     margin-top: 10px;
     box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
@@ -231,14 +231,16 @@
     border-radius: 10px;
     border: solid 3px $light-border-color;
 
-    li + li {
-        border-top: solid 3px $light-border-color;
+    li:last-child{
+        a{
+            border-bottom: none;    
+        }
     }
 
     &:before{
         position: absolute;
         top: -10px;
-        right: 45%;
+        left: 15px;
         display: inline-block !important;
         border-right: 10px solid transparent;
         border-bottom: 10px solid #fff;
@@ -259,6 +261,7 @@
     font-size: 14px;
     font-weight: bold;
     text-transform: none;
+    border-bottom: solid 2px $light-border-color;
 }
 
 .nav-menu ul li:hover>a {
@@ -267,6 +270,10 @@
 
 .nav-menu ul ul {
     margin: 0;
+}
+
+.nav-menu ul li img{
+    border-radius: 50%;
 }
 
 /* Mobile Nav Toggle */
@@ -350,10 +357,6 @@
     }
 }
 
-#mobile-nav ul li .d-flex a {
-    display: none;
-}
-
 #mobile-nav ul li p {
     color: #fff;
     font-size: 13px;
@@ -366,6 +369,10 @@
     display: block;
     outline: none;
     font-weight: 700;
+}
+
+#mobile-nav ul li a img{
+    display: none;
 }
 
 #mobile-nav ul li a:hover {
@@ -389,8 +396,22 @@
     color: $primary-color;
 }
 
-#mobile-nav ul .menu-has-children li a {
-    text-transform: none;
+#mobile-nav ul .menu-has-children{
+    li{
+        padding-left: 30px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        a{
+            color: #fff;
+            text-transform: uppercase !important;
+        }
+        img{
+            border-radius: 50%;
+        }       
+        p{
+            margin-bottom: 0px;
+        } 
+    }
 }
 
 #mobile-nav ul .menu-item-active {
