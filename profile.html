@@ -17,7 +17,7 @@
 	<!-- Site Title -->
 	<title>Ruft Blog</title>
 
-	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Roboto:400,500" rel="stylesheet">
+<!-- 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Roboto:400,500" rel="stylesheet"> -->
 	<!--
 			CSS
 			============================================= -->
@@ -70,7 +70,7 @@
 								<img src="img/icons-notification.png" alt="">
 							</a>
 							<p>Notification</p>
-							<ul>
+							<ul style="max-height: 300px; overflow: scroll;">
 								<li>New</li>
 								<li class="d-flex">
 									<img src="img/i8.jpg" alt="" style="display: inline-block;">
@@ -141,7 +141,7 @@
 						</li>
 						<li>	
 							<div class="post-btn" style="padding-top: 10px;">
-								<a href="#" class="primary-btn text-uppercase">Sign In</a>
+								<a href="#" class="primary-btn text-uppercase" data-toggle="modal" data-target="#signinModalForm">Sign In</a>
 							</div>
 						</li> 
 						<li class="menu-has-children">
@@ -159,6 +159,7 @@
 			</div>
 		</div>
 	</header>
+	<!-- End header Area -->
 
 	<!-- Start banner Area -->
 	<section class="banner-area">
@@ -201,7 +202,7 @@
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-4 col-sm-4 col-12">
-					<a href="#">Edit</a>
+					<a href="#" class="" data-toggle="modal" data-target="#profileEditModalForm">Edit</a>
 				</div>
 			</div>
 			
@@ -412,10 +413,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<!-- End footer Area -->
 
 	<script src="js/vendor/jquery-2.2.4.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-	 crossorigin="anonymous"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	 crossorigin="anonymous"></script> -->
 	<script src="js/vendor/bootstrap.min.js"></script>
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+	<!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script> -->
 	<script src="js/easing.min.js"></script>
 	<script src="js/hoverIntent.js"></script>
 	<script src="js/superfish.min.js"></script>
@@ -427,5 +428,168 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="js/mail-script.js"></script>
 	<script src="js/main.js"></script>
 </body>
+
+<!-- Modal -->
+<!-- Sign In modal -->
+<div class="modal fade" id="signinModalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <!--Content-->
+    <div class="modal-content form-elegant">
+      <!--Header-->
+      <div class="modal-header text-center">
+        <h3 class="modal-title w-100 dark-grey-text font-weight-bold my-3" id="myModalLabel"><strong>Welcome back!</strong></h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <!--Body-->
+      <div class="modal-body mx-4">
+        <!--Body-->
+        <div class="md-form">
+          <label class = "text-uppercase" data-error="wrong" data-success="right" for="Form-email1">username / email</label>
+          <input type="email" id="Form-email1" class="form-control validate">
+        </div>
+
+        <div class="md-form">
+	      <label class="text-uppercase" data-error="wrong" data-success="right" for="Form-pass1">password</label>
+          <input type="password" id="Form-pass1" class="form-control validate">
+          <p class="font-small blue-text d-flex justify-content-center mt-10">
+          	<a href="#" class="blue-text ml-1">
+              Forgot your password?
+            </a>
+          </p>
+        </div>
+
+        <div class="text-center">
+			<a href="#" class="sign-in-btn text-uppercase">Sign In</a>
+		</div>
+      </div>
+
+      <div class="modal-footer">
+      	<a id="create_account" class="authorization d-flex justify-content-center mb-3"> 
+      		Or<span>&nbsp;Create Account Here</span>
+      	</a>
+      </div>
+
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+
+<!-- Sign up modal -->
+<div class="modal fade" id="signupModalForm" tabindex="-2" role="dialog" aria-labelledby="myModalLabel1"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <!--Content-->
+    <div class="modal-content form-elegant">
+      <!--Header-->
+      <div class="modal-header text-center">
+        <h3 class="modal-title w-100 dark-grey-text font-weight-bold my-3" id="myModalLabel1"><strong>Create Account</strong></h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <!--Body-->
+      <div class="modal-body mx-4">
+        <!--Body-->
+        <div class="md-form text-center">
+          <a href="#"><img src="img/google.png" style="max-height: 32px; padding-right: 5px;"></a>
+          <a href="#"><img src="img/facebook.png" style="max-height: 32px; padding-left: 5px;"></a>
+        </div>
+
+        <div class="md-form">
+          <label class = "text-uppercase" data-error="wrong" data-success="right" for="Form-email1">your name</label>
+          <input type="text" id="form-name" class="form-control validate">
+        </div>
+
+        <div class="md-form">
+          <label class = "text-uppercase" data-error="wrong" data-success="right" for="Form-email1">email</label>
+          <input type="email" id="form-email" class="form-control validate">
+        </div>
+
+        <div class="md-form">
+          <label class = "text-uppercase" data-error="wrong" data-success="right" for="Form-email1">mobile no.</label>
+          <input type="text" id="form-mobile-no" class="form-control validate">
+        </div>
+
+        <div class="md-form">
+	      <label class="text-uppercase" data-error="wrong" data-success="right" for="Form-pass1">password</label>
+          <input type="password" id="form-password" class="form-control validate">
+        </div>
+
+        <div class="text-center">
+			<a href="#" class="sign-in-btn text-uppercase">Sign Up</a>
+			<p class="mt-10">By clicking Sign Up you agree to Terms & Privacy Policy</p>
+		</div>
+      </div>
+
+      <div href="#" class="modal-footer">
+      	<a id="signin_account" class="authorization d-flex justify-content-center mb-3">
+      		Already have an account?<span>&nbsp;Sign in Here</span>
+      	</a>
+      </div>
+
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!-- profileEdit Modal -->
+<div class="modal fade" id="profileEditModalForm" tabindex="-2" role="dialog" aria-labelledby="myModalLabel1"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <!--Content-->
+    <div class="modal-content form-elegant">
+      <!--Header-->
+      <div class="modal-header text-center">
+        <h3 class="modal-title w-100 dark-grey-text font-weight-bold my-3" id="myModalLabel1"><strong>Create Account</strong></h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <!--Body-->
+      <div class="modal-body mx-4">
+        <!--Body-->
+        <div class="md-form text-center">
+          <a href="#"><img src="img/google.png" style="max-height: 32px; padding-right: 5px;"></a>
+          <a href="#"><img src="img/facebook.png" style="max-height: 32px; padding-left: 5px;"></a>
+        </div>
+
+        <div class="md-form">
+          <label class = "text-uppercase" data-error="wrong" data-success="right" for="Form-email1">full name</label>
+          <input type="text" id="form-fullname" class="form-control validate">
+        </div>
+
+        <div class="md-form">
+          <label class = "text-uppercase" data-error="wrong" data-success="right" for="Form-email1">username</label>
+          <input type="text" id="form-username" class="form-control validate">
+        </div>
+
+        <div class="md-form">
+          <label class = "text-uppercase" data-error="wrong" data-success="right" for="Form-email1">email</label>
+          <input type="email" id="form-email" class="form-control validate">
+        </div>
+
+        <div class="md-form">
+          <label class = "text-uppercase" data-error="wrong" data-success="right" for="Form-email1">mobile no.</label>
+          <input type="text" id="form-mobile-no" class="form-control validate">
+        </div>
+
+        <div class="md-form">
+	      <label class="text-uppercase" data-error="wrong" data-success="right" for="Form-pass1">password</label>
+          <input type="password" id="form-password" class="form-control validate">
+        </div>
+
+      </div>
+
+      <div href="#" class="modal-footer">
+      	<a href="#" class="cancel-btn text-uppercase">Cancel</a>
+      	<a href="#" class="save-btn text-uppercase">Save</a>
+      </div>
+
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
 
 </html>
