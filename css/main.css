@@ -76,6 +76,10 @@ iframe {
 a,
 a:focus,
 a:hover {
+  color: #9600b3;
+  font-family: 'open-sans';
+  font-weight: normal;
+  font-size: 17px;
   text-decoration: none;
   outline: 0; }
 
@@ -682,13 +686,43 @@ th {
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
+  font-weight: 700;
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url(../fonts/open-sans/OpenSans-Bold.ttf) format("woff"); }
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Open Sans BoldItalic"), local("OpenSans-BoldItalic"), url(../fonts/open-sans/OpenSans-BoldItalic.ttf) format("woff"); }
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local("Open Sans Extrabold"), local("OpenSans-Extrabold"), url(../fonts/open-sans/OpenSans-ExtraBold.ttf) format("woff"); }
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local("Open Sans ExtraboldItalic"), local("OpenSans-ExtraboldItalic"), url(../fonts/open-sans/OpenSans-ExtraBoldItalic.ttf) format("woff"); }
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Open Sans Italic"), local("OpenSans-Italic"), url(../fonts/open-sans/OpenSans-Italic.ttf) format("woff"); }
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
   font-weight: 300;
   src: local("Open Sans Light"), local("OpenSans-Light"), url(../fonts/open-sans/OpenSans-Light.ttf) format("woff"); }
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
+  font-weight: 300;
+  src: local("Open Sans LightItalic"), local("OpenSans-LightItalic"), url(../fonts/open-sans/OpenSans-LightItalic.ttf) format("woff"); }
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
   font-weight: 400;
-  src: local("Open Sans Regular"), local("OpenSans"), url(../fonts/open-sans/OpenSans-Regular.ttf) format("woff"); }
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url(../fonts/open-sans/OpenSans-Regular.ttf) format("woff"); }
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
@@ -698,12 +732,7 @@ th {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 600;
-  src: local("Open Sans Extrabold"), local("OpenSans-Semibold"), url(../fonts/open-sans/OpenSans-ExtraBold.ttf) format("woff"); }
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local("Open Sans Bold"), local("OpenSans-Bold"), url(../fonts/open-sans/OpenSans-Bold.ttf) format("woff"); }
+  src: local("Open Sans SemiboldItalic"), local("OpenSans-SemiboldItalic"), url(../fonts/open-sans/OpenSans-SemiboldItalic.ttf) format("woff"); }
 .sample-text-area {
   background: #fff;
   padding: 100px 0 70px 0; }
@@ -1561,7 +1590,8 @@ h6 {
   box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15); }
 
 .form-elegant .modal-header {
-  border-bottom: none; }
+  border-bottom: none;
+  padding-bottom: 0px; }
 
 .modal-dialog {
   margin-top: 100px;
@@ -1730,21 +1760,7 @@ h6 {
   padding: 0px;
   box-sizing: border-box; }
 
-body, html {
-  height: 100%;
-  font-family: open-sans, sans-serif; }
-
 /*---------------------------------------------*/
-a {
-  font-size: 16px;
-  line-height: 1.7;
-  color: #9600b3;
-  margin: 0px;
-  transition: all 0.4s;
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s; }
-
 a:focus {
   outline: none !important; }
 
@@ -1757,7 +1773,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0px; }
 
 p {
-  font-family: Poppins-Regular;
+  font-family: "Open Sans" sans-serif;
   font-size: 14px;
   line-height: 1.7;
   color: #666666;
@@ -1842,6 +1858,8 @@ iframe {
 /*//////////////////////////////////////////////////////////////////
 [ Utility ]*/
 .txt1 {
+  font-family: 'open-sans';
+  font-style: normal;
   font-size: 16px;
   line-height: 1.5;
   color: #9600b3; }
@@ -1896,7 +1914,7 @@ iframe {
 
 .login100-form-title {
   display: block;
-  font-family: Poppins-Bold;
+  font-family: 'open-sans';
   font-size: 32px;
   font-weight: bold;
   color: #333333;
@@ -1911,7 +1929,7 @@ iframe {
   border-bottom: 2px solid #d9d9d9; }
 
 .label-input100 {
-  font-family: sans-serif;
+  font-family: 'open-sans';
   font-size: 18px;
   font-weight: bold;
   color: #333333;

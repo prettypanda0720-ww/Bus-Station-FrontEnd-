@@ -1039,7 +1039,8 @@ h6 {
     box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15); }
 
 .form-elegant .modal-header {
-    border-bottom: none; }
+    border-bottom: none;
+    padding-bottom: 0px; }
 
 .modal-dialog{
     margin-top: 100px;
@@ -1232,23 +1233,18 @@ h6 {
     box-sizing: border-box;
 }
 
-body, html {
-    height: 100%;
-    font-family: open-sans, sans-serif;
-}
-
 /*---------------------------------------------*/
-a {
-    // font-family: Poppins-Regular;
-    font-size: 16px;
-    line-height: 1.7;
-    color: $primary-color;
-    margin: 0px;
-    transition: all 0.4s;
-    -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-}
+// a {
+//     // font-family: Poppins-Regular;
+//     font-size: 16px;
+//     line-height: 1.7;
+//     color: $primary-color;
+//     margin: 0px;
+//     transition: all 0.4s;
+//     -webkit-transition: all 0.4s;
+//   -o-transition: all 0.4s;
+//   -moz-transition: all 0.4s;
+// }
 
 a:focus {
     outline: none !important;
@@ -1265,7 +1261,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 p {
-    font-family: Poppins-Regular;
+    font-family: "Open Sans" sans-serif;
     font-size: 14px;
     line-height: 1.7;
     color: #666666;
@@ -1331,6 +1327,8 @@ iframe {
 /*//////////////////////////////////////////////////////////////////
 [ Utility ]*/
 .txt1 {
+  font-family: 'open-sans';
+  font-style: normal;
   font-size: 16px;
   line-height: 1.5;
   color: $primary-color;
@@ -1390,7 +1388,7 @@ iframe {
 
 .login100-form-title {
   display: block;
-  font-family: Poppins-Bold;
+  font-family: 'open-sans';
   font-size: 32px;
   font-weight: bold;
   color: #333333;
@@ -1410,7 +1408,7 @@ iframe {
 }
 
 .label-input100 {
-  font-family: sans-serif;
+  font-family: 'open-sans';
   font-size: 18px;
   font-weight: bold;
   color: #333333;
