@@ -1716,6 +1716,22 @@ h6 {
     background: #fff;
     color: #9600b3; }
 
+.started-btn {
+  background: rgba(150, 0, 179, 0.5);
+  color: #fff;
+  line-height: 24px;
+  border-radius: 25px;
+  border: 1px solid #fff;
+  display: inline-block;
+  padding: 5px 40px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  font-family: 'open-sans'; }
+  .started-btn:hover {
+    transform: translateY(4px) scale(1.1); }
+
 .cancel-btn {
   background: #fff;
   line-height: 24px;
@@ -2527,6 +2543,8 @@ body.mobile-nav-active #mobile-nav-toggle {
     .banner-area .fullscreen {
       height: 500px !important; } }
   .banner-area .profilescreen {
+    height: 75px; }
+  .banner-area .review-step-1 {
     height: 75px; }
 
 .banner-content h1 {
@@ -3353,11 +3371,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 /*
 ################
-               End Blog Details  Page style
-################
-*/
-/*
-################
                Review page style
 ################
 */
@@ -3411,6 +3424,70 @@ body.mobile-nav-active #mobile-nav-toggle {
     color: #333333;
     font-size: 18px;
     font-weight: bold; }
+
+/*
+################
+               Review step page style
+################
+*/
+#review_section {
+  background-image: url(img/bg-01.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+  #review_section #review_detail_home {
+    position: relative;
+    background-color: rgba(150, 0, 179, 0.5);
+    border-radius: 15px; }
+    #review_section #review_detail_home .review-content h1 {
+      color: #fff;
+      font-family: 'open-sans';
+      font-size: 3.5em; }
+    #review_section #review_detail_home .review-content p {
+      color: #fff;
+      font-size: 1.3em;
+      word-break: break-word;
+      word-spacing: normal;
+      font-family: 'open-sans';
+      font-weight: 100; }
+
+/*
+################
+               Email page style
+################
+*/
+#email_section {
+  background-image: url(img/bg-01.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+  #email_section #email_detail_home {
+    position: relative;
+    background-color: #fff;
+    border-radius: 15px; }
+    #email_section #email_detail_home img {
+      max-height: 35px; }
+      @media (max-width: 420px) {
+        #email_section #email_detail_home img {
+          max-height: 30px; } }
+    #email_section #email_detail_home hr {
+      border: solid 1.2px #9600b3; }
+    #email_section #email_detail_home #email_footer {
+      width: 100%;
+      position: absolute;
+      left: 15px;
+      bottom: 20px; }
+      #email_section #email_detail_home #email_footer p {
+        font-size: 14px; }
+    #email_section #email_detail_home p {
+      font-family: 'open-sans';
+      font-style: normal;
+      font-size: 18px;
+      line-height: 1.3; }
+    @media (max-width: 420px) {
+      #email_section #email_detail_home {
+        display: block !important;
+        margin-top: 20px !important; } }
 
 .footer-area {
   background: #222222; }

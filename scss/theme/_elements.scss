@@ -1177,6 +1177,24 @@ h6 {
     }
 }
 
+.started-btn {
+    background: rgba(150,0,179,0.5);
+    color: $white;
+    line-height: 24px;
+    border-radius: 25px;
+    border: 1px solid $white;
+    display: inline-block;
+    padding: 5px 40px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    font-family: 'open-sans';
+    &:hover{
+        transform: translateY(4px) scale(1.1);
+    }
+}
+
 .cancel-btn {
     background: $white;
     line-height: 24px;
