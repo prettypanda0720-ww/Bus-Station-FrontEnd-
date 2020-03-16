@@ -944,10 +944,13 @@
 ################
 */
 #email_section{
-  background-image: url(img/bg-01.jpg);
+  margin-top: -70px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  @media(max-width: 420px){
+    margin-top: -20px;
+  }
 
   #email_detail_home{
     position: relative;
@@ -964,12 +967,13 @@
       border: solid 1.2px #9600b3;
     }
     #email_footer{
-      width: 100%;
-      position: absolute;
-      left: 15px;
-      bottom: 20px;
+      margin-top: 20rem;
+      padding-bottom: 20px;
       p{
         font-size: 14px;
+      }
+      @media(max-width: 420px){
+        margin-top: 5rem;
       }
     }
     p{

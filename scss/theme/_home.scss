@@ -1,10 +1,6 @@
 //--------- Start Banner Area -------------//
 .banner-area {
-    background: linear-gradient( 0deg, rgba(128, 80, 250, 0.8), rgba(128, 80, 250, 0.8)), url(../img/banner-bg.jpg) no-repeat center;
-    background: -webkit-linear-gradient( 0deg, rgba(128, 80, 250, 0.8), rgba(128, 80, 250, 0.8)), url(../img/banner-bg.jpg) no-repeat center;
-    background: -moz-linear-gradient( 0deg, rgba(128, 80, 250, 0.8), rgba(128, 80, 250, 0.8)), url(../img/banner-bg.jpg) no-repeat center;
-    background: -ms-linear-gradient( 0deg, rgba(128, 80, 250, 0.8), rgba(128, 80, 250, 0.8)), url(../img/banner-bg.jpg) no-repeat center;
-    background: -o-linear-gradient( 0deg, rgba(128, 80, 250, 0.8), rgba(128, 80, 250, 0.8)), url(../img/banner-bg.jpg) no-repeat center;
+    background: url(../img/banner-bg.jpg) no-repeat center;
     background-size: cover;
     .primary-btn {
         color:$primary-color !important;

@@ -19,16 +19,16 @@ $(document).ready(function() {
   $('#review_detail_home').css("height",window_height - header_height * 4 - 30);
   $('#review_detail_home').css("margin-top", header_height);
 
-  if(window_width <= 420) {
-    // $('#email_detail_home').removeAttr('height');
-    $('#email_section').css("height",window_height);
-    $('#email_detail_home').css("height",window_height - header_height - 30);
-    $('#email_detail_home').css("margin-top", header_height);
-  } else {
-    $('#email_section').css("height",window_height - header_height * 2);
-    $('#email_detail_home').css("height",window_height - header_height * 4 - 30);
-    $('#email_detail_home').css("margin-top", header_height);
-  }
+  // if(window_width <= 420) {
+  //   // $('#email_detail_home').removeAttr('height');
+  //   $('#email_section').css("height",window_height);
+  //   $('#email_detail_home').css("height",window_height - header_height - 30);
+  //   $('#email_detail_home').css("margin-top", header_height);
+  // } else {
+  //   $('#email_section').css("height",window_height - header_height * 2);
+  //   $('#email_detail_home').css("height",window_height - header_height * 4 - 30);
+  //   $('#email_detail_home').css("margin-top", header_height);
+  // }
   
 
   if (document.getElementById("default-select")) {

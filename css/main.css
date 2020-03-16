@@ -575,7 +575,7 @@ th {
   margin-right: 0; }
 
 .section-gap {
-  padding: 30px; }
+  padding: 70px; }
   @media (max-width: 419px) {
     .section-gap {
       padding: 20px 0px; } }
@@ -2518,11 +2518,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff; }
 
 .banner-area {
-  background: linear-gradient(0deg, rgba(128, 80, 250, 0.8), rgba(128, 80, 250, 0.8)), url(../img/banner-bg.jpg) no-repeat center;
-  background: -webkit-linear-gradient(0deg, rgba(128, 80, 250, 0.8), rgba(128, 80, 250, 0.8)), url(../img/banner-bg.jpg) no-repeat center;
-  background: -moz-linear-gradient(0deg, rgba(128, 80, 250, 0.8), rgba(128, 80, 250, 0.8)), url(../img/banner-bg.jpg) no-repeat center;
-  background: -ms-linear-gradient(0deg, rgba(128, 80, 250, 0.8), rgba(128, 80, 250, 0.8)), url(../img/banner-bg.jpg) no-repeat center;
-  background: -o-linear-gradient(0deg, rgba(128, 80, 250, 0.8), rgba(128, 80, 250, 0.8)), url(../img/banner-bg.jpg) no-repeat center;
+  background: url(../img/banner-bg.jpg) no-repeat center;
   background-size: cover; }
   .banner-area .primary-btn {
     color: #9600b3 !important;
@@ -3457,10 +3453,13 @@ body.mobile-nav-active #mobile-nav-toggle {
 ################
 */
 #email_section {
-  background-image: url(img/bg-01.jpg);
+  margin-top: -70px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
+  @media (max-width: 420px) {
+    #email_section {
+      margin-top: -20px; } }
   #email_section #email_detail_home {
     position: relative;
     background-color: #fff;
@@ -3473,12 +3472,13 @@ body.mobile-nav-active #mobile-nav-toggle {
     #email_section #email_detail_home hr {
       border: solid 1.2px #9600b3; }
     #email_section #email_detail_home #email_footer {
-      width: 100%;
-      position: absolute;
-      left: 15px;
-      bottom: 20px; }
+      margin-top: 20rem;
+      padding-bottom: 20px; }
       #email_section #email_detail_home #email_footer p {
         font-size: 14px; }
+      @media (max-width: 420px) {
+        #email_section #email_detail_home #email_footer {
+          margin-top: 5rem; } }
     #email_section #email_detail_home p {
       font-family: 'open-sans';
       font-style: normal;
