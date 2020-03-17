@@ -17,166 +17,192 @@
 	<!-- Site Title -->
 	<title>Ruft Blog</title>
 
-<!-- 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Roboto:400,500" rel="stylesheet"> -->
-	<!--
-			CSS
-			============================================= -->
 	<link rel="stylesheet" href="css/linearicons.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
-	<!-- <link rel="stylesheet" href="css/magnific-popup.css"> -->
-	<!-- <link rel="stylesheet" href="css/nice-select.css"> -->
-	<!-- <link rel="stylesheet" href="css/animate.min.css"> -->
-	<!-- <link rel="stylesheet" href="css/owl.carousel.css"> -->
 	<link rel="stylesheet" href="css/main.css">
+
+	<style>
+		/*
+	################
+				   Email page style
+	################
+	*/
+	body{
+		background-color: #9600b3;
+	}
+	.section-gap {
+		padding: 70px; }
+	@media (max-width: 419px) {
+		.section-gap {
+			padding: 20px 0px; } }
+	@media (min-width: 420px) and (max-width: 767px) {
+		.section-gap {
+			padding: 20px 0; } }
+	.container {
+		width: 100%;
+		padding-right: 15px;
+		padding-left: 15px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	@media (min-width: 576px) {
+		.container {
+			max-width: 540px;
+		}
+	}
+
+	@media (min-width: 768px){
+		.container {
+			max-width: 720px;
+		}
+	}
+
+	@media (min-width: 992px){
+		.container {
+			max-width: 960px;
+		}
+	}
+
+	#email_section {
+		margin-top: -70px;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat; }
+	@media (max-width: 420px) {
+		#email_section {
+			margin-top: -20px; } }
+	#email_section #email_detail_home {
+		position: relative;
+		background-color: #fff;
+		border-radius: 15px; }
+	#email_section #email_detail_home img {
+		max-height: 35px; }
+	@media (max-width: 420px) {
+		#email_section #email_detail_home img {
+			max-height: 30px; } }
+	#email_section #email_detail_home hr {
+		border: solid 1.2px #9600b3; }
+	#email_section #email_detail_home #email_footer {
+		margin-top: 20rem;
+		padding-bottom: 20px; }
+	#email_section #email_detail_home #email_footer p {
+		font-size: 14px; }
+	@media (max-width: 420px) {
+		#email_section #email_detail_home #email_footer {
+			margin-top: 5rem; } }
+	#email_section #email_detail_home p {
+		font-family: 'open-sans';
+		font-style: normal;
+		font-size: 18px;
+		line-height: 1.3;
+	}
+	@media (max-width: 420px) {
+		#email_section #email_detail_home {
+			display: block !important;
+			margin-top: 20px !important; } }
+	.mt-70 {
+		margin-top: 70px;
+	}
+
+	.text-center {
+		text-align: center !important;
+	}
+
+	.align-items-center {
+		-ms-flex-align: center !important;
+		align-items: center !important;
+	}
+
+	.justify-content-center {
+		-ms-flex-pack: center !important;
+		justify-content: center !important;
+	}
+
+	.row {
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		margin-right: -15px;
+		margin-left: -15px;
+	}
+	.mt-15 {
+		margin-top: 15px;
+	}
+
+	@media (min-width: 768px){
+		.col-md-4 {
+			-ms-flex: 0 0 33.333333%;
+			flex: 0 0 33.333333%;
+			max-width: 33.333333%;
+		}
+	}
+
+	@media (min-width: 576px){
+		.col-sm-10 {
+			-ms-flex: 0 0 83.333333%;
+			flex: 0 0 83.333333%;
+			max-width: 83.333333%;
+		}
+	}
+
+	.col-10 {
+		-ms-flex: 0 0 83.333333%;
+		flex: 0 0 83.333333%;
+		max-width: 83.333333%;
+	}
+
+	.save-btn {
+		background: #9600b3;
+		color: #fff;
+		line-height: 24px;
+		border-radius: 25px;
+		border: 1px solid #9600b3;
+		display: inline-block;
+		padding: 5px 30px;
+		font-size: 18px;
+		font-weight: 500;
+		cursor: pointer;
+		position: relative;
+	}
+
+	.save-btn:hover {
+		background: #fff;
+		color: #9600b3;
+	}
+
+	.text-left {
+		text-align: left !important;
+	}
+
+	a, a:focus, a:hover {
+		color: #9600b3;
+		font-family: 'open-sans';
+		font-weight: normal;
+		font-size: 17px;
+		text-decoration: none;
+		outline: 0;
+	}
+
+	h3 {
+		font-size: 24px;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		line-height: 1.2em;
+	}
+	</style>
 </head>
 
 <body>
-	<!-- Start header Area -->
-	<header id="header">
-		<div class="container box_1170 main-menu">
-			<div class="row align-items-center justify-content-between d-flex">
-				<div id="logo">
-					<a href="index.html"><img src="img/logo.png" alt="" title="" /></a>
-				</div>
-				<nav id="nav-menu-container">
-					<ul class="nav-menu">
-						<li class="menu-active">
-							<div class="align-items-center justify-content-center flex-column d-flex">
-								<a href="#">
-									<img src="img/icons-survey.png" alt="">
-								</a>
-								<p>Survery</p>
-							</div>
-						</li>
-						<li class="menu-active">
-							<div class="align-items-center justify-content-center flex-column d-flex">
-								<a href="#">
-									<img src="img/icons-create.png" alt="">
-								</a>
-								<p>Review</p>
-							</div>
-						</li>
-						<li class="menu-active">
-							<div class="align-items-center justify-content-center flex-column d-flex">
-								<a href="#">
-									<img src="img/icons-popular.png" alt="">
-								</a>
-								<p>Popular</p>
-							</div>
-						</li>
-						<li class="menu-has-children">
-							<a href="#">
-								<img src="img/icons-notification.png" alt="">
-							</a>
-							<p>Notification</p>
-							<ul style="max-height: 300px; overflow: scroll;">
-								<li>New</li>
-								<li class="d-flex">
-									<img src="img/i8.jpg" alt="" style="display: inline-block;">
-									<a href="profile.html">
-										&nbsp;&nbsp;ABC posted a new review
-									</a>
-								</li>
-								<li class="d-flex">
-									<img src="img/i8.jpg" alt="" style="display: inline-block;">
-									<a href="profile.html">
-										&nbsp;&nbsp;ABC posted a new review
-									</a>
-								</li>
-								<li class="d-flex">
-									<img src="img/i8.jpg" alt="" style="display: inline-block;">
-									<a href="profile.html">
-										&nbsp;&nbsp;ABC posted a new review
-									</a>
-								</li>
-								<li class="d-flex">
-									<img src="img/i8.jpg" alt="" style="display: inline-block;">
-									<a href="profile.html">
-										&nbsp;&nbsp;ABC posted a new review
-									</a>
-								</li>
-								<li>Earlier</li>
-								<li class="d-flex">
-									<img src="img/i8.jpg" alt="" style="display: inline-block;">
-									<a href="profile.html">
-										&nbsp;&nbsp;ABC posted a new review
-									</a>
-								</li>
-								<li class="d-flex">
-									<img src="img/i8.jpg" alt="" style="display: inline-block;">
-									<a href="profile.html">
-										&nbsp;&nbsp;ABC posted a new review
-									</a>
-								</li>
-								<li class="d-flex">
-									<img src="img/i8.jpg" alt="" style="display: inline-block;">
-									<a href="profile.html">
-										&nbsp;&nbsp;ABC posted a new review
-									</a>
-								</li>
-								<li class="d-flex">
-									<img src="img/i8.jpg" alt="" style="display: inline-block;">
-									<a href="profile.html">
-										&nbsp;&nbsp;ABC posted a new review
-									</a>
-								</li>
-							</ul>
-						</li>
-						<li class="menu-active">
-							<div class="align-items-center justify-content-center flex-column d-flex">
-								<a href="#">
-									<img src="img/icons-forum.png" alt="">
-								</a>
-								<p>Forum</p>
-							</div>
-						</li>
-						<li class="menu-active">
-							<div class="align-items-center justify-content-center flex-column d-flex">
-								<a href="#">
-									<img src="img/icons-MaaS.png" alt="">
-								</a>
-								<p>MaaS</p>
-							</div>
-						</li>
-						<li>	
-							<div class="post-btn" style="padding-top: 10px;">
-								<a href="signin.html" class="primary-btn text-uppercase">Sign In</a>
-							</div>
-						</li> 
-						<li class="menu-has-children">
-							<a href="#">
-								<img src="img/icons-setting.png" alt="" style="padding-top: 10px;">
-							</a>
-							<p style="display: none;">Setting</p>
-							<ul>
-								<li><a href="profile.html">Profile</a></li>
-								<li><a href="setting.html">Setting</a></li>
-							</ul>
-						</li>
-					</ul>
-				</nav>
-			</div>
-		</div>
-	</header>
-	<!-- End header Area -->
-
-	<!-- Start banner Area -->
-	<section class="banner-area">
-		<div class="container box_1170">
-			<div class="row review-step-1">
-			</div>
-		</div>
-	</section>
-	<!-- End banner Area -->
-	
 	<!-- Start main body Area -->
-	<div id="email_section" class="main-body section-gap" style="background-image: url('img/bg-01.jpg');">
+	<div id="email_section" class="main-body section-gap">
 		<div class="container box_1170">
 			<div id="email_detail_home" class="mt-70">
 				<div class="row align-items-center justify-content-center text-center">
 					<div class="col-md-4 mt-15">
-						<img src="img/logo.png">
+						<img src="img/email-logo.jpg">
 					</div>
 				</div>
 				<hr/>
@@ -186,7 +212,6 @@
 						<p class="mt-20">
 						Est eiusmod ad sint dolor nostrud sit minim dolore nostrud deserunt quis quis aliqua in duis proident ut ad duis proident eu veniam officia qui sint amet voluptate sed reprehenderit velit ad ex sit laboris ut.
 						Est eiusmod ad sint dolor nostrud sit minim dolore nostrud deserunt quis quis aliqua in duis proident ut ad duis proident eu veniam officia qui sint amet voluptate sed reprehenderit velit ad ex sit laboris ut.
-						
 						</p>
 					</div>
 				</div>
@@ -207,71 +232,6 @@
 		</div>
 	</div>
 	<!-- Start main body Area -->
-
-	<!-- start footer Area -->
-	<footer class="footer-area section-gap">
-		<div class="container box_1170">
-			<div class="row">
-				<div class="col-lg-3 col-md-6 col-sm-6">
-					<div class="single-footer-widget">
-						<h6 class="footer_title">About Us</h6>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore
-							magna aliqua.</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 col-sm-6">
-					<div class="single-footer-widget">
-						<h6 class="footer_title">Newsletter</h6>
-						<p>Stay updated with our latest trends</p>
-						<div id="mc_embed_signup">
-							<form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-							 method="get" class="subscribe_form relative">
-								<div class="input-group d-flex flex-row">
-									<input name="EMAIL" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '"
-									 required="" type="email">
-									<button class="btn sub-btn"><span class="lnr lnr-arrow-right"></span></button>
-								</div>
-								<div class="mt-10 info"></div>
-							</form>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-sm-6">
-					<div class="single-footer-widget instafeed">
-						<h6 class="footer_title">Instagram Feed</h6>
-						<ul class="list instafeed d-flex flex-wrap">
-							<li><img src="img/i1.jpg" alt=""></li>
-							<li><img src="img/i2.jpg" alt=""></li>
-							<li><img src="img/i3.jpg" alt=""></li>
-							<li><img src="img/i4.jpg" alt=""></li>
-							<li><img src="img/i5.jpg" alt=""></li>
-							<li><img src="img/i6.jpg" alt=""></li>
-							<li><img src="img/i7.jpg" alt=""></li>
-							<li><img src="img/i8.jpg" alt=""></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-2 col-md-6 col-sm-6">
-					<div class="single-footer-widget f_social_wd">
-						<h6 class="footer_title">Follow Us</h6>
-						<p>Let us be social</p>
-						<div class="f_social">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-dribbble"></i></a>
-							<a href="#"><i class="fa fa-behance"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row footer-bottom d-flex justify-content-between align-items-center">
-				<p class="col-lg-12 footer-text text-center"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-			</div>
-		</div>
-	</footer>
-	<!-- End footer Area -->
 
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/superfish.min.js"></script>
