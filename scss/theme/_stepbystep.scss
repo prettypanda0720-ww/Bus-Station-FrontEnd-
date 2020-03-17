@@ -1,0 +1,144 @@
+#steps_review_detail_home{
+  position: relative;
+  background-color: rgba(150,0,179,0.5);
+  border-radius: 15px;
+  form{
+    width: 100%;
+  }
+  @media(max-width: 420px){
+    display: block !important;
+    margin-top: 20px !important;
+    padding-top: 12em;
+    padding-bottom: 12em;
+  }
+}
+
+.wizard > .steps .current-info, .wizard > .steps .number {
+  display: none;
+}
+#wizard {
+  min-height: 600px;
+  padding: 65px 75px 65px;
+  .emoticon-wrapper{
+    display: flex;
+    flex-direction: row;
+    .emoticon{
+      max-height: 100px;
+    }
+  }
+  .step1-header-title{
+    font-size: 35px;
+    color: white;
+    margin-bottom: 1.5em;
+    margin-top: 2em;
+  }
+  .emoticon-wrapper input[type="checkbox"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+  }
+
+  .emoticon-wrapper img {
+    display: inline-block;
+  }
+
+  .emoticon-wrapper img:hover {
+    background-color: #dfd;
+  }
+
+  .emoticon-wrapper input[type="checkbox"]:focus + img {
+    border: 2px dashed #444;
+  }
+
+  .emoticon-wrapperr input[type="checkbox"]:checked{
+      &:before{
+        content: "-";
+      }
+  }
+}
+.steps {
+  position: absolute;
+  bottom: -50px;
+  width: 34%;
+  left: 33%;
+  ul {
+    display: flex;
+    position: relative;
+    li {
+      width: 20.16%;
+      margin-right: 10px;
+      a {
+        display: inline-block;
+        width: 100%;
+        height: 7px;
+        background: #e6e6e6;
+
+        border-radius: 3.5px;
+      }
+      &.first, &.checked {
+        a {
+          background: #f3d4b7;
+          transition: all 0.5s ease;
+        }
+      }
+    }
+    &:before {
+      color: #333;
+      top: -38px;
+      position: absolute;
+    }
+  }
+}
+
+.actions {
+  position: absolute;
+  width: 100%;
+  bottom: 30px;
+  left: 30px;
+  ul {
+    display: flex;
+    flex-direction: row;
+    li:first-child{
+      a{
+        background-color: white;
+        font-size: 30px;
+        border-radius: 50%;
+        padding: 0px 11px 6px;
+      }
+    }
+    li:nth-child(2){
+      padding-left: calc(50% - 130px);
+      a{
+        color: white;
+        font-size: 24px;
+        border: 1px solid white;
+        border-radius: 10px;
+        padding: 5px 40px;
+        &:hover{
+          transform: translateY(10px) scaleY(1.2);
+        }
+      }
+    }
+    li:last-child{
+      padding-left: calc(50% - 150px);
+      a{
+        color: white;
+        font-size: 24px;
+        border: 1px solid white;
+        border-radius: 10px;
+        padding: 5px 40px;
+        &:hover{
+          transform: translateY(10px) scaleY(1.2);
+        }
+      }
+    }
+  }
+}
+
+.content{
+  .custom-control-label{
+    img{
+      max-height: 100px;
+    }
+  }
+}

@@ -17,17 +17,10 @@
 	<!-- Site Title -->
 	<title>Ruft Blog</title>
 
-<!-- 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Roboto:400,500" rel="stylesheet"> -->
-	<!--
-			CSS
-			============================================= -->
 	<link rel="stylesheet" href="css/linearicons.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
-	<!-- <link rel="stylesheet" href="css/magnific-popup.css"> -->
-	<!-- <link rel="stylesheet" href="css/nice-select.css"> -->
-	<!-- <link rel="stylesheet" href="css/animate.min.css"> -->
-	<!-- <link rel="stylesheet" href="css/owl.carousel.css"> -->
+	<link rel="stylesheet" href="css/bootstrap-image-checkbox.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -173,10 +166,51 @@
 	<!-- Start main body Area -->
 	<div id="review_section" class="main-body section-gap mt--30" style="background-image: url('img/bg-01.jpg');">
 		<div class="container box_1170">
-			<div id="review_detail_home" class="row align-items-center justify-content-center text-center">
-				<div class="col-md-8 review-content">
+			<div id="steps_review_detail_home">
+				<form action="">
+					<div id="wizard">
+						<h4></h4>
+						<section class="row align-items-center justify-content-center text-center d-flex flex-column">
+							<h3 class="step1-header-title">How are you feeling?</h3>
+							<!--<div class="emoticon-wrapper">-->
+								<!--<input type="checkbox" id="checkboxHappy" name="checkboxHappy" value="happy" checked>-->
+								<!--<img src="img/happy.png" class="emoticon mr-20"/>-->
+								<!--<input type="checkbox" id="checkboxAngry" name="checkboxAngry" value="angry">-->
+								<!--<img src="img/angry.png" class="emoticon ml-20"/>-->
+							<!--</div>-->
+							<div class="row">
+								<div class="col-md-6">
+									<div class="custom-control custom-checkbox image-checkbox">
+										<input type="checkbox" class="custom-control-input" id="checkboxHappy" value="happy">
+										<label class="custom-control-label" for="checkboxHappy">
+											<img src="img/happy.png" alt="#" class="img-fluid">
+										</label>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="custom-control custom-checkbox image-checkbox">
+										<input type="checkbox" class="custom-control-input" id="checkboxAngry" value="angry">
+										<label class="custom-control-label" for="checkboxAngry">
+											<img src="img/angry.png" alt="#" class="img-fluid">
+										</label>
+									</div>
+								</div>
+							</div>
+						</section>
 
-				</div>
+						<h4></h4>
+						<section></section>
+
+						<h4></h4>
+						<section></section>
+
+						<h4></h4>
+						<section></section>
+
+						<h4></h4>
+						<section></section>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>
@@ -249,7 +283,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/superfish.min.js"></script>
-
+	<script src="js/jquery.steps.js"></script>
 	<script src="js/review.js"></script>
 </body>
 
