@@ -3476,8 +3476,8 @@ body.mobile-nav-active #mobile-nav-toggle {
     #steps_review_detail_home {
       display: block !important;
       margin-top: 20px !important;
-      padding-top: 12em;
-      padding-bottom: 12em; } }
+      padding-top: 0;
+      padding-bottom: 5em; } }
 
 .wizard > .steps .current-info, .wizard > .steps .number {
   display: none; }
@@ -3485,6 +3485,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 #wizard {
   min-height: 600px;
   padding: 65px 75px 65px; }
+  @media (max-width: 420px) {
+    #wizard {
+      padding: 15px 30px; } }
   #wizard .emoticon-wrapper {
     display: flex;
     flex-direction: row; }
@@ -3503,6 +3506,9 @@ body.mobile-nav-active #mobile-nav-toggle {
     font-size: 35px;
     color: white;
     margin-bottom: 0.5em; }
+    @media (max-width: 420px) {
+      #wizard .step2-header-title {
+        font-size: 25px; } }
   #wizard .emoticon-wrapper input[type="checkbox"] {
     opacity: 0;
     position: fixed;
@@ -3521,6 +3527,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   bottom: -50px;
   width: 34%;
   left: 33%; }
+  @media (max-width: 420px) {
+    .steps {
+      bottom: -20px; } }
   .steps ul {
     display: flex;
     position: relative; }
@@ -3583,6 +3592,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   border-radius: 10px;
   text-align: left;
   padding: 50px 0px 50px 40px; }
+  @media (max-width: 420px) {
+    .content .feedback-regarding {
+      padding: 15px 0px 15px 50px; } }
 
 .bulgy-radios label {
   display: block;
