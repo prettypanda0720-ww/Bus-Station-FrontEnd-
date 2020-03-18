@@ -163,9 +163,15 @@ $(document).ready(function() {
 
               if ( newIndex === 3 ) {
                   $('.steps ul').addClass('step-4');
-                  $('.actions ul').addClass('step-last');
               } else {
                   $('.steps ul').removeClass('step-4');
+              }
+
+              if ( newIndex === 4 ) {
+                  $('.steps ul').addClass('step-5');
+                  $('.actions ul').addClass('step-last');
+              } else {
+                  $('.steps ul').removeClass('step-5');
                   $('.actions ul').removeClass('step-last');
               }
               return true;
@@ -201,6 +207,16 @@ $(document).ready(function() {
           $('.custom-control-input').not(this).prop('checked', false);
       });
   });
+
+  const labels = document.querySelectorAll('.label');
+   labels.forEach(label => {
+       const chars = label.textContent.split('');
+       label.innerHTML = '';
+       chars.forEach(char => {
+           label.innerHTML += `<span>${char === ' ' ? '&nbsp' : char}</span>`;
+       });
+   })
+
 });
 
 
