@@ -142,69 +142,148 @@ $(document).ready(function() {
     }
   });
 
-  $(function(){
-      $("#wizard").steps({
-          headerTag: "h4",
-          bodyTag: "section",
-          transitionEffect: "fade",
-          enableAllSteps: true,
-          transitionEffectSpeed: 500,
-          onStepChanging: function (event, currentIndex, newIndex) {
-              if ( newIndex === 1 ) {
-                  $('.steps ul').addClass('step-2');
-              } else {
-                  $('.steps ul').removeClass('step-2');
-              }
-              if ( newIndex === 2 ) {
-                  $('.steps ul').addClass('step-3');
-              } else {
-                  $('.steps ul').removeClass('step-3');
-              }
-
-              if ( newIndex === 3 ) {
-                  $('.steps ul').addClass('step-4');
-              } else {
-                  $('.steps ul').removeClass('step-4');
-              }
-
-              if ( newIndex === 4 ) {
-                  $('.steps ul').addClass('step-5');
-                  $('.actions ul').addClass('step-last');
-              } else {
-                  $('.steps ul').removeClass('step-5');
-                  $('.actions ul').removeClass('step-last');
-              }
-              return true;
+  var form = $("#review-form");
+  form.validate({
+      errorPlacement: function errorPlacement(error, element) {
+           element.before(error); 
+      },
+      rules: {
+          feeling : {
+              required: true,
           },
-          labels: {
-              finish: "SUBMIT",
-              next: "Next",
-              previous: "«"
-          }
-      });
-      // Custom Steps Jquery Steps
-      $('.wizard > .steps li a').click(function(){
-          $(this).parent().addClass('checked');
-          $(this).parent().prevAll().addClass('checked');
-          $(this).parent().nextAll().removeClass('checked');
-      });
-      // Custom Button Jquery Steps
-      $('.forward').click(function(){
-          $("#wizard").steps('next');
-      })
-      $('.backward').click(function(){
-          $("#wizard").steps('previous');
-      })
-      // Checkbox
-      $('.checkbox-circle label').click(function(){
-          $('.checkbox-circle label').removeClass('active');
-          $(this).addClass('active');
-      })
-  })
+          feedback_regarding : {
+              required: true,
+          },
+          feedback_categories : {
+              required: true,
+          },
+      },
+      onfocusout: function(element) {
+          $(element).valid();
+      },
+      highlight : function(element, errorClass, validClass) {
+          $(element.form).find('.actions').addClass('form-error');
+          $(element).removeClass('valid');
+          $(element).addClass('error');
+      },
+      unhighlight: function(element, errorClass, validClass) {
+          $(element.form).find('.actions').removeClass('form-error');
+          $(element).removeClass('error');
+          $(element).addClass('valid');
+      }
+  });
+  form.steps({
+      headerTag: "h4",
+      bodyTag: "section",
+      transitionEffect: "fade",
+      enablePagination: true,
+      labels: {
+          previous : '«',
+          next : 'Next',
+          finish : 'Submit',
+          current : ''
+      },
+      titleTemplate : '<span class="title">#title#</span>',
+      onStepChanging: function (event, currentIndex, newIndex)
+      {
+          form.validate().settings.ignore = ":disabled,:hidden";
+          return form.valid();
+      },
+      onFinishing: function (event, currentIndex)
+      {
+          form.validate().settings.ignore = ":disabled";
+          return form.valid();
+      },
+      onFinished: function (event, currentIndex)
+      {
+          alert('Sumited');
+      },
+      // onInit : function (event, currentIndex) {
+      //     event.append('demo');
+      // }
+  });
+
+  // $('.review-form > .actions li a').click(function(){
+  //   console.log("clicked");
+  //   $steps = $('.review-form > .steps li');
+  //   for (var i = 0; i < $steps.length; i++) {
+  //      if($steps[i].attr('aria-selected')){
+  //        $current = $steps[i];
+  //        break;
+  //      }
+  //   }
+  //   $current.prevAll().addClass('checked');
+  //   $current.nextAll().removeClass('checked');
+  // });
+
+
+  // ----------for survey page ------------------
+  var form = $("#survey-form");
+  form.validate({
+      errorPlacement: function errorPlacement(error, element) {
+           element.before(error); 
+      },
+      rules: {
+          feeling : {
+              required: true,
+          },
+          feedback_regarding : {
+              required: true,
+          },
+          feedback_categories : {
+              required: true,
+          },
+      },
+      onfocusout: function(element) {
+          $(element).valid();
+      },
+      highlight : function(element, errorClass, validClass) {
+          $(element.form).find('.actions').addClass('form-error');
+          $(element).removeClass('valid');
+          $(element).addClass('error');
+      },
+      unhighlight: function(element, errorClass, validClass) {
+          $(element.form).find('.actions').removeClass('form-error');
+          $(element).removeClass('error');
+          $(element).addClass('valid');
+      }
+  });
+  form.steps({
+      headerTag: "h4",
+      bodyTag: "section",
+      transitionEffect: "fade",
+      enablePagination: true,
+      labels: {
+          previous : '«',
+          next : 'Next',
+          finish : 'Submit',
+          current : ''
+      },
+      titleTemplate : '<span class="title">#title#</span>',
+      onStepChanging: function (event, currentIndex, newIndex)
+      {
+          form.validate().settings.ignore = ":disabled,:hidden";
+          return form.valid();
+      },
+      onFinishing: function (event, currentIndex)
+      {
+          form.validate().settings.ignore = ":disabled";
+          return form.valid();
+      },
+      onFinished: function (event, currentIndex)
+      {
+          alert('Sumited');
+      },
+      // onInit : function (event, currentIndex) {
+      //     event.append('demo');
+      // }
+  });
+
 
   $(document).ready(function(){
       $('.custom-control-input').click(function() {
           $('.custom-control-input').not(this).prop('checked', false);
+          $(this).prop('checked',true);
       });
   });
 
