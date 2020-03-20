@@ -142,24 +142,12 @@ $(document).ready(function() {
     }
   });
 
-  
-  
 
-  var form = $("#review-form");
+  // ----------for survey page ------------------
+  var form = $("#survey-form");
   form.validate({
       errorPlacement: function errorPlacement(error, element) {
-           // element.before(error); 
-         var input = $('.incident-regarding .input200');
-         console.log(input.length);
-         for(var i=0; i<input.length; i++) {
-           if(validate(input[i]) == false){
-             // console.log('validate false');
-             showValidate(input[i]);
-           } else if(validate(input[i]) == true){
-             console.log('validate true');
-             hideValidate(input[i]);
-           }
-         }
+           element.before(error); 
       },
       rules: {
           feeling : {
@@ -171,37 +159,19 @@ $(document).ready(function() {
           feedback_categories : {
               required: true,
           },
-          bus_no : {
-              required: true,
-          },
-          incident_date : {
-              required: true,
-          },
-          incident_time : {
-              required: true,
-          },
-          route_no : {
-              required: true,
-          },
-          route_name : {
-              required: true,
-          },
-          bus_operator : {
-              required: true,
-          },
       },
       onfocusout: function(element) {
           $(element).valid();
       },
       highlight : function(element, errorClass, validClass) {
-          // $(element.form).find('.actions').addClass('form-error');
-          // $(element).removeClass('valid');
-          // $(element).addClass('error');
+          $(element.form).find('.actions').addClass('form-error');
+          $(element).removeClass('valid');
+          $(element).addClass('error');
       },
       unhighlight: function(element, errorClass, validClass) {
-          // $(element.form).find('.actions').removeClass('form-error');
-          // $(element).removeClass('error');
-          // $(element).addClass('valid');
+          $(element.form).find('.actions').removeClass('form-error');
+          $(element).removeClass('error');
+          $(element).addClass('valid');
       }
   });
   form.steps({
@@ -235,63 +205,6 @@ $(document).ready(function() {
       // }
   });
 
-  $('.input200').each(function(){
-      $(this).on('blur', function(){
-          if($(this).val().trim() != "") {
-              $(this).addClass('has-val');
-          }
-          else {
-              $(this).removeClass('has-val');
-          }
-      })    
-  })
-
-  function validate (input) {
-    if($(input).val().trim() == ''){
-        console.log('empty');
-        return false;
-    } else {
-      console.log('not empty');
-        return true;
-    }
-  }
-
-  function showValidate(input) {
-    var thisAlert = $(input).parent();
-
-    $(thisAlert).addClass('alert-validate-2');
-  }
-
-  function hideValidate(input) {
-      var thisAlert = $(input).parent();
-
-      $(thisAlert).removeClass('alert-validate-2');
-  }
-
-  $('.incident-regarding .input200').each(function(){
-    $(this).focus(function(){
-       hideValidate(this);
-    });
-  });
-
-  jQuery.extend(jQuery.validator.messages, {
-      required: "",
-      remote: "",
-      email: "",
-      url: "",
-      date: "",
-      dateISO: "",
-      number: "",
-      digits: "",
-      creditcard: "",
-      equalTo: "",
-      bus_no: "",
-      incident_date: "",
-      incident_time: "",
-      route_no: "",
-      route_name: "",
-      bus_operator: "",
-  });
 
   $(document).ready(function(){
       $('.custom-control-input').click(function() {
@@ -309,13 +222,6 @@ $(document).ready(function() {
        });
    })
 
-  function initMap() {
-    var mapProp= {
-      center:new google.maps.LatLng(51.508742,-0.120850),
-      zoom:5,
-    };
-    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-  }
 });
 
 

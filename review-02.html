@@ -21,6 +21,7 @@
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/bootstrap-image-checkbox.css">
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -170,9 +171,9 @@
 				<form method="POST" id="review-form" class="review-form">
 						<h4></h4>
 						<section>
-							<div class="row align-items-center justify-content-center text-center d-flex flex-column">
-								<h3 class="step1-header-title">How are you feeling?</h3>
-								<div class="row">
+							<h3 class="step2-header-title">How are you feeling?</h3>
+							<div class="survey-regarding align-items-center d-flex flex-column">
+								<div class="row align-items-center justify-content-center d-flex flex-row">
 									<div class="col-md-6 col-6">
 										<div class="custom-control custom-checkbox image-checkbox">
 											<input type="checkbox" class="custom-control-input" name="feeling" id="checkboxHappy" value="happy" checked/>
@@ -195,10 +196,10 @@
 
 						<h4></h4>
 						<section>
-							<div class="row align-items-center justify-content-center text-center d-flex flex-column">
-								<h3 class="step2-header-title">I want to give feedback regarding</h3>
-								<div class="row feedback-regarding">
-									<div class="col-md-4 bulgy-radios" role="radiogroup" aria-labelledby="bulgy-radios-label">
+							<h3 class="step2-header-title">I want to give feedback regarding</h3>
+							<div class="survey-regarding align-items-center d-flex flex-column">
+								<div class="row align-items-center justify-content-center text-center d-flex flex-row">
+									<div class="col-lg-4 col-md-6 col-sm-6 col-8 bulgy-radios" role="radiogroup" aria-labelledby="bulgy-radios-label">
 										<label>
 											<input class="customRadio" type="radio" name="feedback_regarding" value="1" checked/>
 											<span class="radio"></span>
@@ -225,7 +226,7 @@
 											<span class="label">Airport Shuttle</span>
 										</label>
 									</div>
-									<div class="col-md-4 bulgy-radios" role="radiogroup" aria-labelledby="bulgy-radios-label">
+									<div class="col-lg-4 col-md-6 col-sm-6 col-8 bulgy-radios" role="radiogroup" aria-labelledby="bulgy-radios-label">
 										<label>
 											<input class="customRadio" type="radio" name="feedback_regarding" value="6"/>
 											<span class="radio"></span>
@@ -252,7 +253,7 @@
 											<span class="label">Taxicab & Ridehailing</span>
 										</label>
 									</div>
-									<div class="col-md-4 bulgy-radios" role="radiogroup" aria-labelledby="bulgy-radios-label">
+									<div class="col-lg-4 col-md-6 col-sm-6 col-8 bulgy-radios" role="radiogroup" aria-labelledby="bulgy-radios-label">
 										<label>
 											<input class="customRadio" type="radio" name="feedback_regarding" value="6"/>
 											<span class="radio"></span>
@@ -285,10 +286,10 @@
 
 						<h4></h4>
 						<section>
-							<div class="row align-items-center justify-content-center text-center d-flex flex-column">
-								<h3 class="step2-header-title">Feedback Categories</h3>
-								<div class="row feedback-regarding">
-									<div class="col-md-4 bulgy-radios" role="radiogroup" aria-labelledby="bulgy-radios-label">
+							<h3 class="step2-header-title">Feedback Categories</h3>
+							<div class="survey-regarding align-items-center d-flex flex-column">
+								<div class="row align-items-center justify-content-center text-center d-flex flex-row">
+									<div class="col-lg-4 col-md-6 col-sm-6 col-8 bulgy-radios" role="radiogroup" aria-labelledby="bulgy-radios-label">
 										<label>
 											<input type="radio" name="feedback_categories" value="1" checked/>
 											<span class="radio"></span>
@@ -310,7 +311,7 @@
 											<span class="label">Operator</span>
 										</label>
 									</div>
-									<div class="col-md-4 bulgy-radios" role="radiogroup" aria-labelledby="bulgy-radios-label">
+									<div class="col-lg-4 col-md-6 col-sm-6 col-8 bulgy-radios" role="radiogroup" aria-labelledby="bulgy-radios-label">
 										<label>
 											<input type="radio" name="feedback_categories" value="6"/>
 											<span class="radio"></span>
@@ -332,7 +333,7 @@
 											<span class="label">New Line/Route</span>
 										</label>
 									</div>
-									<div class="col-md-4 bulgy-radios" role="radiogroup" aria-labelledby="bulgy-radios-label">
+									<div class="col-lg-4 col-md-6 col-sm-6 col-8 bulgy-radios" role="radiogroup" aria-labelledby="bulgy-radios-label">
 										<label>
 											<input type="radio" name="feedback_categories" value="6"/>
 											<span class="radio"></span>
@@ -355,20 +356,66 @@
 
 						<h4></h4>
 						<section>
+							<h3 class="step2-header-title">Incident Info</h3>
 							<div class="row align-items-center justify-content-center text-center d-flex flex-column">
-								<h3 class="step2-header-title">Incident Info</h3>
-								<div class="row">
-									<div class="col-md-4"></div>
-									<div class="col-md-4"></div>
-									<div class="col-md-4"></div>
+								<div class="row incident-regarding">
+									<div class="col-lg-4 col-md-6 col-sm-6 col-12">
+										<div class="wrap-input200 validate-input">
+										    <span class="label-input200">
+										    	BUS NO
+										    </span>
+										    <input class="input200" type="text" name="bus_no" id="bus_no"/>
+										    <span class="focus-input200" data-symbol="&#xf1f0;"></span>
+										</div>
+										<div class="wrap-input200 validate-input">
+										    <span class="label-input200">
+										    	INCIDENT DATE
+										    </span>
+										    <input class="input200" type="text" name="incident_date" id="incident_date"/>
+										    <span class="focus-input200" data-symbol="&#xf1f0;"></span>
+										</div>
+										<div class="wrap-input200 validate-input">
+										    <span class="label-input200">
+										    	INCIDENT TIME
+										    </span>
+										    <input class="input200" type="text" name="incident_time" id="incident_time"/>
+										    <span class="focus-input200" data-symbol="&#xf1f0;"></span>
+										</div>
+									</div>
+									<div class="col-lg-4 col-md-6 col-sm-6 col-12">
+										<div class="wrap-input200 validate-input">
+										    <span class="label-input200">
+										    	ROUTE NO
+										    </span>
+										    <input class="input200" type="text" name="route_no" id="route_no"/>
+										    <span class="focus-input200" data-symbol="&#xf1f0;"></span>
+										</div>
+										<div class="wrap-input200 validate-input">
+										    <span class="label-input200">
+										    	ROUTE NAME
+										    </span>
+										    <input class="input200" type="text" name="route_no" id="route_no"/>
+										    <span class="focus-input200" data-symbol="&#xf1f0;"></span>
+										</div>
+										<div class="wrap-input200 validate-input">
+										    <span class="label-input200">
+										    	BUS OPERATOR
+										    </span>
+										    <input class="input200" type="text" name="route_no" id="route_no"/>
+										    <span class="focus-input200" data-symbol="&#xf1f0;"></span>
+										</div>
+									</div>
+									<div class="col-lg-4 col-md-6 col-sm-6 col-12" id="googleMap">
+										
+									</div>
 								</div>
 							</div>
 						</section>
 
 						<h4></h4>
 						<section>
+							<h3 class="step2-header-title">Quick Review</h3>
 							<div class="row align-items-center justify-content-center text-center d-flex flex-column">
-								<h3 class="step2-header-title">Quick Review</h3>
 								<div class="row">
 									<div class="col-md-4"></div>
 									<div class="col-md-4"></div>
@@ -446,7 +493,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		</div>
 	</footer>
 	<!-- End footer Area -->
-
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmtMNAriIl2V40CDcY7e0e4j4OphdmQAY&callback=initMap" async defer></script>
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/superfish.min.js"></script>
 	<script src="js/jquery.validate.min.js"></script>
