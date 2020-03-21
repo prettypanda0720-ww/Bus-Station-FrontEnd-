@@ -867,7 +867,7 @@ function refreshStepNavigation(wizard, options, state, oldIndex)
         oldStepAnchor.parent().addClass("done").removeClass("error")._selectAria(false);
         stepTitles.eq(oldIndex).removeClass("current").next(".body").removeClass("current");
         currentInfo = oldStepAnchor.find(".current-info");
-        currentOrNewStepAnchor.focus();
+        // currentOrNewStepAnchor.focus();
     }
 
     currentOrNewStepAnchor.prepend(currentInfo).parent()._selectAria().removeClass("done")._enableAria();

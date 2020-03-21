@@ -330,14 +330,17 @@ $(document).ready(function() {
       });
   });
 
-  const labels = document.querySelectorAll('.label');
-   labels.forEach(label => {
-       const chars = label.textContent.split('');
-       label.innerHTML = '';
+  
+const labels = document.querySelectorAll('.label');
+  for(var i = 1; i < labels.length-1; i++)
+  {
+      const chars = labels[i].textContent.split('');
+       labels[i].innerHTML = '';
        chars.forEach(char => {
-           label.innerHTML += `<span>${char === ' ' ? '&nbsp' : char}</span>`;
+           labels[i].innerHTML += `<span>${char === ' ' ? '&nbsp' : char}</span>`;
        });
-   })
+  }
+
 
   function initMap() {
     var mapProp= {
