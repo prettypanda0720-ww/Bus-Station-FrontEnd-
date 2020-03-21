@@ -1597,6 +1597,22 @@ h6 {
   margin-top: 100px;
   max-width: 400px; }
 
+#reviewSubmitModalForm .modal-dialog {
+  margin-top: 250px;
+  max-width: 500px; }
+  @media (max-width: 420px) {
+    #reviewSubmitModalForm .modal-dialog {
+      max-width: 400px;
+      margin-top: 150px;
+      margin-left: auto;
+      margin-right: auto; } }
+  @media (min-width: 420px) and (max-width: 768px) {
+    #reviewSubmitModalForm .modal-dialog {
+      max-width: 400px;
+      margin-top: 150px;
+      margin-left: auto;
+      margin-right: auto; } }
+
 #signupModalForm .modal-dialog .modal-header {
   padding-bottom: 0px; }
 @media (max-width: 420px) {
@@ -4052,6 +4068,25 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-right: 1rem;
   max-width: 140px;
   padding: 0.25rem; }
+
+#reviewSubmitModalForm .modal-content .img-submitted {
+  max-height: 50px;
+  margin-left: auto;
+  margin-right: auto; }
+#reviewSubmitModalForm .modal-content h4 {
+  margin-top: 1.2rem;
+  color: #9600b3;
+  font-size: 25px; }
+#reviewSubmitModalForm .modal-content .lbl-1 {
+  text-align: center;
+  color: #000;
+  margin-top: 1rem;
+  display: block; }
+#reviewSubmitModalForm .modal-content .lbl-2 {
+  text-align: center;
+  color: #000;
+  margin-bottom: 3rem;
+  display: block; }
 
 .footer-area {
   background: #222222; }

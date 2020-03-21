@@ -460,3 +460,30 @@
   max-width: 140px;
   padding: 0.25rem;
 }
+
+#reviewSubmitModalForm{
+  .modal-content{
+    .img-submitted{
+      max-height: 50px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h4{
+      margin-top: 1.2rem;
+      color: $primary-color;
+      font-size: 25px;
+    }
+    .lbl-1 {
+      text-align: center;
+      color: #000;
+      margin-top: 1rem;
+      display: block;
+    }
+    .lbl-2 {
+      text-align: center;
+      color: #000;
+      margin-bottom: 3rem;
+      display: block;
+    }
+  }
+}

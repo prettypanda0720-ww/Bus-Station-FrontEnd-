@@ -249,7 +249,7 @@ $(document).ready(function() {
       },
       onFinished: function (event, currentIndex)
       {
-          alert('Sumited');
+          $('#reviewSubmitModalForm').modal('show');
       },
       // onInit : function (event, currentIndex) {
       //     event.append('demo');
