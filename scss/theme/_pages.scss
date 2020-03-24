@@ -1018,10 +1018,9 @@
     max-height: 30px;
   }
 
-  span{
-    @media(max-width: 768px) {
-      display: none;
-    }
+  @media(max-width: 768px) {
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
 .filter-header{
@@ -1034,6 +1033,11 @@
     &:hover{
      font-weight: bold; 
     }
+  }
+  @media(max-width: 768px){
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap;
   }
 }
 .filter-content{

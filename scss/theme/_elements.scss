@@ -2398,6 +2398,20 @@ body {
 }
 
 /*-------------custom select box---------------*/
+
+.select-trigger{
+    position: relative;
+    display: block;
+    padding: 0 0px 0 22px;
+    font-size: 15px;
+    font-weight: 300;
+    color: #9600b3;
+    line-height: 35px;
+    background: white;
+    border-radius: 25px;
+    cursor: pointer;
+    border: 1px solid #9600b3;
+}
 .center {
   position: absolute;
   display: inline-block;
@@ -2418,19 +2432,13 @@ body {
     position: relative;
     display: inline-block;
   }
-    .sortby-select-trigger, .viewby-select-trigger {
-        position: relative;
-        display: block;
+    .sortby-select-trigger{
+        width: 242px;
+        @extend .select-trigger;
+    }
+    .viewby-select-trigger {
         width: 130px;
-        padding: 0 0px 0 22px;
-        font-size: 15px;
-        font-weight: 300;
-        color: #9600b3;
-        line-height: 35px;
-        background: white;
-        border-radius: 25px;
-        cursor: pointer;
-        border: 1px solid #9600b3;
+        @extend .select-trigger;
     }
     .sortby-select-trigger:after, .viewby-select-trigger:after {
         position: absolute;
